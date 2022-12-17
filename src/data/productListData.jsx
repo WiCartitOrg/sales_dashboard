@@ -8,7 +8,8 @@ const  ProductList=[
   {
     "url":item1,
      "name":"bag",
-     "date":""
+     "date":"112/4/56",
+     "inStock":"35"
   }
 ]
 
