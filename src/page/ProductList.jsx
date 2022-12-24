@@ -1,4 +1,5 @@
 import React from 'react'
+import ProductListBoard from '../components/ProductListBoard'
 
 function ProductList() {
   return (
@@ -7,19 +8,7 @@ function ProductList() {
     <div className="right">
       <div className="sub-scroll-abel">
 
-    <div class="oders-frame">
-    <h1>
-    Product list
-    </h1>
-   <div className="row div">
-      <span>Product Name</span>
-      <span>In Stock</span>
-      <span>Date</span>
-      <span>Price</span>
-      <span>Category</span>
-      <span></span>
-   </div>
-    </div>
+        <ProductListBoard/>
     
       </div>
 
