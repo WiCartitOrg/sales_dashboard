@@ -5,6 +5,7 @@ import MoreOpptions from './MoreOpptions';
 function ProductListBoard() {
 
     const [productList, setproductList] = useState(ProductList);
+    const [SetPopup, setSetPopup] = useState(true);
     
     // UseEffect(() => {
     
@@ -26,6 +27,7 @@ const newList =productList.map((data)=>{
         <span>{data.category}</span>
       <MoreOpptions
       props={data}
+      set={setSetPopup}
       />
         
      </div>
@@ -35,6 +37,7 @@ const newList =productList.map((data)=>{
 
   return (
     <div class="oders-frame">
+
     <h1>
     Product list
     </h1>
@@ -52,6 +55,28 @@ const newList =productList.map((data)=>{
     {newList}
 
 
+    <section className={SetPopup?"more-popup":"more-popup popup-more"}>
+     <h1>
+     Are you sure you want to delete this product?
+     </h1>
+     <p>
+     Deleting this product will erase its data from your stock and will not be visible to custimers again
+     </p>
+     <div>
+      <button onClick={()=>{
+        setSetPopup(item=>!item)
+      }}>
+        Cancle
+      </button>
+
+      
+      <button  onClick={()=>{
+        setSetPopup(item=>!item)
+      }}>
+         Delete
+      </button>
+     </div>
+    </section>
     </div>
   )
 }
